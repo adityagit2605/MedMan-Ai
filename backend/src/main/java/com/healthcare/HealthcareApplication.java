@@ -1,0 +1,16 @@
+package com.healthcare;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableScheduling   // enables @Scheduled for background jobs (§2.7)
+@EnableAsync        // enables @Async for non-blocking LLM calls (§2.5)
+public class HealthcareApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(HealthcareApplication.class, args);
+    }
+}
